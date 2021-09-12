@@ -1,5 +1,6 @@
 from sys import argv
 import json
+from typing import Union
 
 
 tests = argv[1]
@@ -14,7 +15,7 @@ with open(values, 'r') as f:
     values_json = json.load(f)
 
 
-def recursive_search(tests: dict) -> None:
+def recursive_search(tests: Union[dict, list]) -> None:
     """"Рекурсивная функция поиска id в tests.json и добавления им value из values.json"""
     if type(tests) == dict:
         for instance in values_json['values']:
