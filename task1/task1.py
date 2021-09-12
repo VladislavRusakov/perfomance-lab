@@ -4,16 +4,16 @@ import sys
 n = int(sys.argv[1])
 m = int(sys.argv[2])
 
-x = 1
+number = 1
 line = []
 
 while '1' not in line:
-    if x + m - 1 > n:
-        x += m - n - 1
-        line.append(str(x))
+    if number + m - 1 > n:
+        number += m - n - 1
+        line.append(str(number))
     else:
-        x += m - 1
-        line.append(str(x))
+        number += m - 1
+        line.append(str(number))
 
 
 print('1', end='')
